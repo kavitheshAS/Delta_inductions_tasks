@@ -46,5 +46,5 @@ done
 echo "Mentee allocation completed."
 export mentor_allocations
 export mentor 
-############################################################################################ TRY TO CREATE AN ARRAY FOR EACH MENTOR, THE ELEMENTS OF THE ARRAY ARE THE ALLOCATED MENTEES
+
 
