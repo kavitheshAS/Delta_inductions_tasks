@@ -5,6 +5,7 @@
 read -p "Enter user type (mentor/mentee): " usertype
 read -p "Enter username: " username
 read -p "Enter task number: " task_no
+read -p "Enter domain to submit: " domain
 
 if [ "$usertype" == "mentee" ]; then
 	read -p "Enter roll number(for mentee): " roll_no
@@ -21,7 +22,6 @@ if [ "$usertype" == "mentee" ]; then
 
 elif [ "$usertype" == "mentor" ]; then
     n=1
-	read -p "Enter domain: " domain
     while IFS= read -r line; do
         mentee=$(echo "$line" | awk '{print $1}')
         a[n]="$mentee"
