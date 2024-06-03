@@ -12,3 +12,8 @@ echo "alias setQuiz='sudo /home/core/setQuiz.sh'" >> ~/.bashrc
 
 
 #echo "alias alias_name="sudo /pathtofile/" >> ~/.bashrc"
+#alias_definition="alias cronjob='sudo /home/core/cronjob.sh'"
+#if ! grep -qF "$alias_definition" ~/.bashrc; then
+#   echo "$alias_definition" >> ~/.bashrc
+#fi
+#something like the above would be more appropriate as it doesnt append the alias once its added.
