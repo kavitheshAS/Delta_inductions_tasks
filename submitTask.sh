@@ -16,9 +16,7 @@ if [ "$usertype" == "mentee" ]; then
 
     mkdir -p "$pathvar/webdev" "$pathvar/appdev" "$pathvar/sysad"
 
-    touch "$pathvar/webdev/task1.txt" "$pathvar/webdev/task2.txt" "$pathvar/webdev/task3.txt"
-    touch "$pathvar/appdev/task1.txt" "$pathvar/appdev/task2.txt" "$pathvar/appdev/task3.txt"
-    touch "$pathvar/sysad/task1.txt" "$pathvar/sysad/task2.txt" "$pathvar/sysad/task3.txt"
+    touch "$pathvar/$domain/task1.txt" "$pathvar/$domain/task2.txt" "$pathvar/$domain/task3.txt"
 
 elif [ "$usertype" == "mentor" ]; then
     n=1
