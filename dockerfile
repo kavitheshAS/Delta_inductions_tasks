@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 
 RUN apt-get update && \
-    apt-get install -y apache2 php libapache2-mod-php php-mysql nano sed cron && \
+    apt-get install -y apache2 php libapache2-mod-php php-mysql nano sed cron phpmyadmin && \
     apt-get clean  
 
 COPY TASK1/userGen.sh /usr/local/bin/
