@@ -1,0 +1,15 @@
+FROM mysql
+ENV root_password=rootpasword
+ENV database_name=mydb
+ENV username=user1
+ENV user_password=userpassword
+
+EXPOSE 3306
+
+COPY TASK1/initialise.sql /docker-entrypoint-initdb.d/
+COPY TASK1/backup.sh /docker-entrypoint-initdb.d/
+
+
+#files/scripts inside this directory are executed when the container runs.
+
+
