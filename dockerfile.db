@@ -1,4 +1,15 @@
-FROM mysql
+
+
+
+
+COPY TASK1/initialise.sql /docker-entrypoint-initdb.d/
+COPY TASK1/backup.sh /docker-entrypoint-initdb.d/
+
+
+#files/scripts inside this directory are executed when the container runs.
+
+FROM mysql:latest
+
 ENV root_password=rootpasword
 ENV database_name=mydb
 ENV username=user1
@@ -10,6 +21,12 @@ COPY TASK1/initialise.sql /docker-entrypoint-initdb.d/
 COPY TASK1/backup.sh /docker-entrypoint-initdb.d/
 
 
-#files/scripts inside this directory are executed when the container runs.
+RUN chmod +x /docker-entrypoint-initdb.d/backup.sh
 
+RUN apt-get update && apt-get -y install cron
+
+RUN echo "3 5-8 * 1-7 * /backup.sh > /dev/null 2>&1" | crontab -
+
+# Start cron service and MySQL
+CMD ["sh", "-c", "cron && exec mysqld --user=mysql --console"]
 
