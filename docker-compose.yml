@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  db:
+    image: nouchka/sqlite3
+    volumes:
+      - chatroom_data:/data
+
+  server:
+    build: .
+    ports:
+      - "1234:1234"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_PATH=/data/users.db
+    volumes:
+      - chatroom_data:/data
+    entrypoint: ["python", "server.py"]
+
+  client:
+    build: .
+    depends_on:
+      - server
+    entrypoint: ["python", "client.py"]
+
+volumes:
+  chatroom_data:
