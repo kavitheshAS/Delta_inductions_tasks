@@ -1,0 +1,9 @@
+
+#for client
+FROM python:3.8
+
+WORKDIR /app
+
+COPY my_client.py /app
+
+CMD ["python3", "my_client.py"]
