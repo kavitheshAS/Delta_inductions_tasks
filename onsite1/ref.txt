@@ -1,0 +1,12 @@
+timestamp   username   ip   downloaded_data  uploaded_data  billing_stat
+
+
+data time name ip data stat
+
+for every row in each uniq ip add the data , get a array with {name:data}
+
+for every data in array , find cost by data*0.05 
+
+then from that file , cat by descending?
+
+then head 3 

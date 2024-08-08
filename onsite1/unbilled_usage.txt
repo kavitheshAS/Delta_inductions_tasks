@@ -1,0 +1,7 @@
+eve 554.35
+bob 539.45
+charlie 449.70
+david 418.95
+alice 358.60
+jack 53.80
+IP_Adress 
