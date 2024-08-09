@@ -1,0 +1,13 @@
+bash script, that does
+
+check for running containers, a given container and all the related ones(one the same network),check how long they have been running,get time , if more than a given threshold then : stop (!!only when all the containers in a given network are old, kill all the containers and if atleast one of them isnt old , then keep the network alive
+
+to use:
+1)docker container kill(kill one or more running containers)
+2)docker container logs(fetches logs of a container)
+3)docker container rm(remove the containers)
+4)docker container inspect(to inspect detailed information about one or more containers)
+5)docker network inspect (displays info about one or more networks)
+6)docker network rm (remove one or more networks)
+
+
