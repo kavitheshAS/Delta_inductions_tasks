@@ -1,0 +1,7 @@
+Create a website to get input of NITT students' roll number and their mess .
+This server redirects the request based on the mess to the respective mess load balancer. 
+There are 3 different messes and each of the mess has a load balancer that has 3 instances of the mess server running.
+Each instance returns the mess name and the instance_id(to differentiate the different instance).Make a script to send
+multiple requests to the main server and give the output of how many requests hit each of the server instances.
+The load balancer has a ratio of 4:3:2 weightage for each server.Configure the domain name in your local as mess.local, <{first, second, third}>.<mess_name>.local
+Use nginx for loadbalancing.    
